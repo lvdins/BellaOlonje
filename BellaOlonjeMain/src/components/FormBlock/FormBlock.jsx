@@ -39,23 +39,23 @@ function FormBlock() {
 
   const contactForm = () => {
     return (
-      <form className="contact-us" onSubmit={handleSubmit(onSubmit)}>
+      <form className="form-us" onSubmit={handleSubmit(onSubmit)}>
         <h2 className="form__title">Contact Us</h2>
         {errors.name && (
-          <span className="contact-us__error">{errors.name.message}</span>
+          <span className="form__error">{errors.name.message}</span>
         )}
         <input
-          className="contact-us__input"
+          className="form__input"
           placeholder="Name"
           {...register("name", { required: "This field is required" })}
           autoComplete="name"
         />
 
         {errors.email && (
-          <span className="contact-us__error">{errors.email.message}</span>
+          <span className="form__error">{errors.email.message}</span>
         )}
         <input
-          className="contact-us__input"
+          className="form__input"
           placeholder="Email"
           {...register("email", {
             required: "This field is required",
@@ -68,10 +68,10 @@ function FormBlock() {
         />
 
         {errors.message && (
-          <span className="contact-us__error">{errors.message.message}</span>
+          <span className="form__error">{errors.message.message}</span>
         )}
         <textarea
-          className="contact-us__input-area"
+          className="form__input-area"
           placeholder="Message..."
           {...register("message", { required: "This field is required" })}
           autoComplete="off"
@@ -86,9 +86,7 @@ function FormBlock() {
 
   const sentSuccess = () => {
     return (
-      <div className="contact-us__sent-success">
-        We have received your message!
-      </div>
+      <div className="form__sent-success">We have received your message!</div>
     );
   };
 

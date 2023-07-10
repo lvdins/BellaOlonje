@@ -14,7 +14,7 @@ const ContactUs = () => {
       <form className="contact-us__form" onSubmit={handleSubmit()}>
         <input
           className="contact-us__input"
-          placeholder="John Doe"
+          placeholder="Username"
           {...register("name", { required: true })}
         />
         {errors.name && (
@@ -23,7 +23,7 @@ const ContactUs = () => {
 
         <input
           className="contact-us__input"
-          placeholder="john.doe@mail.com"
+          placeholder="E-mail"
           {...register("email", { required: true })}
         />
         {errors.email && (
@@ -32,6 +32,7 @@ const ContactUs = () => {
 
         <textarea
           className="contact-us__input-area"
+          placeholder="Write your message..."
           {...register("message", { required: true })}
         />
         {errors.message && (

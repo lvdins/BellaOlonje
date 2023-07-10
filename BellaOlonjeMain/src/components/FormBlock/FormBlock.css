@@ -1,4 +1,4 @@
-.contact-us {
+.form-us {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,8 +8,8 @@
   padding: 60px 0;
 }
 
-.contact-us__input,
-.contact-us__input-area {
+.form__input,
+.form__input-area {
   width: 400px;
   font-size: 20px;
   border: 0px;
@@ -18,17 +18,17 @@
   margin: 20px;
 }
 
-.contact-us__input {
+.form__input {
   height: 68px;
   padding: 0 30px;
 }
 
-.contact-us__input-area {
+.form__input-area {
   height: 200px;
   padding: 30px;
 }
 
-.contact-us__error {
+.form__error {
   color: var(--primary);
   background-color: var(--white);
   padding: 5px;
@@ -38,7 +38,7 @@
   transition: fadeIn 0.2s ease-out;
 }
 
-.contact-us__sent-success {
+.form__sent-success {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,12 +66,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .contact-us {
+  .form-us {
     background-image: none;
     background-color: #252b42;
   }
 
-  .contact-us__input {
+  .form__input,
+  .form__input-area {
     width: 90%;
   }
 }

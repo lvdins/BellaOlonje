@@ -23,7 +23,7 @@
 
 .btn__btn-primary:hover,
 .btn__btn-secondary:hover {
-  background-color: var(--light_grey);
+  background-color: var(--buttonhvr);
   color: var(--primary);
   border-color: var(--primary);
 }

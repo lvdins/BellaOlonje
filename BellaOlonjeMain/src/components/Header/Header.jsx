@@ -1,43 +1,22 @@
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useMatch } from "react-router-dom";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../../assets/logo.png";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-const Header = () => {
-  const menuItems = [
-    { label: "Home", link: "/" },
-    { label: "Product", link: "/about" },
-    { label: "Faq", link: "/about" },
-    { label: "Contact", link: "/a" },
-  ];
-
-  const scrollDirection = useScrollDirection();
-
+function CustomNavLink({ to, children, activeClassName, ...rest }) {
+  let location = useLocation();
   return (
-    <>
-      <div className="menu">
-        <BurgerMenu />
-      </div>
-      <HeaderScroll />
-      <header
-        className={`header ${scrollDirection === "down" ? "hide" : "show"}`}
-      >
-        <Link to={"/"}>
-          <img className="logo" src={Logo} alt="BellaLogo" />
-        </Link>
-
-        <div className="menu-items">
-          {menuItems.map((item, index) => (
-            <Link key={index} to={item.link}>
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </header>
-    </>
+    <NavLink
+      to={to}
+      className={location.pathname === to ? activeClassName : ""}
+      {...rest}
+    >
+      {children}
+    </NavLink>
   );
-};
+}
 
 function useScrollDirection() {
   const [scrollDirection, setScrollDirection] = useState("up");
@@ -68,5 +47,40 @@ function HeaderScroll() {
     </div>
   );
 }
+
+const Header = () => {
+  const scrollDirection = useScrollDirection();
+
+  const menuItems = [
+    { label: "Home", link: "/" },
+    { label: "Product", link: "/product" },
+    { label: "Faq", link: "/faq" },
+    { label: "Contact", link: "/contact" },
+  ];
+
+  return (
+    <>
+      <div className="menu">
+        <BurgerMenu />
+      </div>
+      <HeaderScroll />
+      <header
+        className={`header ${scrollDirection === "down" ? "hide" : "show"}`}
+      >
+        <Link to={"/"}>
+          <img className="logo" src={Logo} alt="BellaLogo" />
+        </Link>
+
+        <div className="menu-items">
+          {menuItems.map((item, index) => (
+            <CustomNavLink key={index} to={item.link} activeClassName="active">
+              {item.label}
+            </CustomNavLink>
+          ))}
+        </div>
+      </header>
+    </>
+  );
+};
 
 export default Header;
