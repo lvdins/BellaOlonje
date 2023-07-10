@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@600&display=swap");
+
+.image-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-text-container.right {
+  flex-direction: row-reverse;
+  margin-left: 9.063rem;
+}
+
+.image-text-container.right img {
+  margin-right: 12.5rem;
+}
+
+.image-text-container.left img {
+  margin-left: 10rem;
+}
+
+.image-text-container.left {
+  margin-right: 0rem;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  height: 600px;
+}
+
+.text-container {
+  flex: 1;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right;
+}
+
+.text-container h1 {
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fa4a0c;
+}
+
+.text-container h2 {
+  font-size: 40px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+}
+
+.text-container h3 {
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-text-container,
+  .image-text-container.right,
+  .image-text-container.left {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+
+  .text-container h1 {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    color: #fa4a0c;
+    text-align: center;
+  }
+
+  .text-container h2 {
+    font-size: 40px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 57px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .text-container h3 {
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.2px;
+    color: #737373;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .image-text-container.right img {
+    margin: 0px;
+  }
+
+  .image-text-container.left img {
+    margin: 0px;
+  }
+}

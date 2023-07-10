@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@600&display=swap");
+@import "./style/colors.css";
+@import "./style/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(12px, 1vw, 64px);
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: clamp(12px, 5vw, 58px);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+.btn__btn-primary {
+  height: 68px;
+  border-radius: 30px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 70px;
+  flex-grow: 0;
+  max-width: min-content;
+  cursor: pointer;
+  background-color: var(--primary);
+  border: solid var(--primary) 2px;
+  color: var(--white);
+}
+
+.btn__btn-secondary {
+  margin-top: 17px;
+  margin-bottom: 253px;
+  background-color: transparent;
+  border: solid var(--primary) 2px;
+  color: var(--primary);
+}
+
+.btn__btn-primary:hover,
+.btn__btn-secondary:hover {
+  background-color: var(--light_grey);
+  color: var(--primary);
+  border-color: var(--primary);
+}
