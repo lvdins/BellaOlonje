@@ -1,4 +1,4 @@
-import "../Buttons/Buttons.css";
+import "../Buttons/Buttons.scss";
 
 const Button = ({ text, variant, type }) => {
   return (

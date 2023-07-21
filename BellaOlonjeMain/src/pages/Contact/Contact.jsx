@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import Button from "../../components/Buttons/Buttons";
-import "../../pages/Contact/Contact.css";
+import "../../pages/Contact/Contact.scss";
 
 const ContactUs = () => {
   const {

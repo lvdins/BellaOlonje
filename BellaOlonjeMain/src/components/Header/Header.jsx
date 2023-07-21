@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./Header.scss";
 import { Link, NavLink, useMatch } from "react-router-dom";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../../assets/logo.png";

@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/hero";
-import "./Home.css";
+import "./Home.scss";
 import Content from "../../components/Content/Content";
 import Phones from "../../components/Phones/Phones";
 import FormBlock from "../../components/FormBlock/FormBlock";

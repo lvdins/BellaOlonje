@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import FadeInSection from "../../components/FadeInSection";
-import "./ImageTextLayout.css";
+import "./ImageTextLayout.scss";
 
 const ImageTextLayout = ({
   imageSrc,

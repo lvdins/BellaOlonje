@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../Button/Button";
-import "../FormBlock/Formblock.css";
+import "../FormBlock/Formblock.scss";
 
 function FormBlock() {
   const [isSent, setisSent] = useState(false);
