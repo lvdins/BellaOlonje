@@ -4,6 +4,7 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import Logo from "../../assets/logo.png";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 function CustomNavLink({ to, children, activeClassName, ...rest }) {
   let location = useLocation();
@@ -53,7 +54,7 @@ const Header = () => {
 
   const menuItems = [
     { label: "Home", link: "/" },
-    { label: "Product", link: "/product" },
+    { label: "Product", link: "ImageTextLayout" },
     { label: "Faq", link: "/faq" },
     { label: "Contact", link: "/contact" },
   ];
@@ -72,12 +73,22 @@ const Header = () => {
         </Link>
 
         <div className="menu-items">
-          {menuItems.map((item, index) => (
-            <CustomNavLink key={index} to={item.link} activeClassName="active">
-              {item.label}
-            </CustomNavLink>
-          ))}
-        </div>
+  {menuItems.map((item, index) => {
+    if (item.label === 'Product') {
+      return (
+        <ScrollLink key={index} to={item.link} smooth={true} duration={500 } className="menu-items">
+          {item.label}
+        </ScrollLink>
+      );
+    } else {
+      return (
+        <CustomNavLink key={index} to={item.link} activeClassName="active">
+          {item.label}
+        </CustomNavLink>
+      );
+    }
+  })}
+</div>
       </header>
     </>
   );
