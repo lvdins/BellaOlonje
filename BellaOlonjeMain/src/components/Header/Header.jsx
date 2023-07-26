@@ -73,22 +73,48 @@ const Header = () => {
         </Link>
 
         <div className="menu-items">
-  {menuItems.map((item, index) => {
-    if (item.label === 'Product') {
-      return (
-        <ScrollLink key={index} to={item.link} smooth={true} duration={500 } className="menu-items">
-          {item.label}
-        </ScrollLink>
-      );
-    } else {
-      return (
-        <CustomNavLink key={index} to={item.link} activeClassName="active">
-          {item.label}
-        </CustomNavLink>
-      );
-    }
-  })}
-</div>
+          {menuItems.map((item, index) => {
+            if (item.label === "Home") {
+              return (
+                <Link
+                  onClick={() => {
+                    setTimeout(
+                      () => window.scrollTo({ top: 0, behavior: "smooth" }),
+                      0
+                    );
+                  }}
+                  to="/"
+                  key={index}
+                  className="menu-items"
+                >
+                  {item.label}
+                </Link>
+              );
+            } else if (item.label === "Product") {
+              return (
+                <ScrollLink
+                  key={index}
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
+                  className="menu-items"
+                >
+                  {item.label}
+                </ScrollLink>
+              );
+            } else {
+              return (
+                <CustomNavLink
+                  key={index}
+                  to={item.link}
+                  activeClassName="active"
+                >
+                  {item.label}
+                </CustomNavLink>
+              );
+            }
+          })}
+        </div>
       </header>
     </>
   );
