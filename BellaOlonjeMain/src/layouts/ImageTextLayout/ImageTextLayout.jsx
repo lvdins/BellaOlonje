@@ -1,17 +1,13 @@
 import PropTypes from "prop-types";
 import FadeInSection from "../../components/FadeInSection";
-import "./ImageTextLayout.css";
+import "./ImageTextLayout.scss";
 
-const ImageTextLayout = ({
-  imageSrc,
-  text,
-  subtitle,
-  title,
-  isImageOnRight,
-}) => {
+
+const ImageTextLayout = ({ imageSrc, text, subtitle, title, isImageOnRight }) => {
   return (
     <div
-      className={
+      id="ImageTextLayout"
+      className={     
         isImageOnRight
           ? "image-text-container right"
           : "image-text-container left"

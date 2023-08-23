@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../App.css";
+import "../App.scss";
 
 function FadeInSection(props) {
   const [isVisible, setVisible] = useState(false);

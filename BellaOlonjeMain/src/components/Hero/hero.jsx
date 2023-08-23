@@ -1,5 +1,5 @@
 import React from "react";
-import "./hero.css";
+import "./hero.scss";
 import "../Buttons/Buttons";
 
 const hero = () => {
@@ -8,7 +8,7 @@ const hero = () => {
       <div className="hero__content">
         <p className="hero__description">Food App</p>
         <h1 className="hero__title">
-          Why stay hungry when you can order form Bella Onojie
+          Why stay hungry when you can order from Bella Onojie
         </h1>
         <p className="hero__description">
           Download the bella onoje’s food app now on

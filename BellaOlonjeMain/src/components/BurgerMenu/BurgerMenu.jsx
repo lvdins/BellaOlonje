@@ -1,6 +1,6 @@
 import { stack as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
-import "./BurgerMenu.css";
+import "./BurgerMenu.scss";
 
 function BurgerMenu() {
   return (
@@ -14,7 +14,7 @@ function BurgerMenu() {
       <Link to="/404" className="bm-link-item-list">
         Faq
       </Link>
-      <Link to="/404" className="bm-link-item-list">
+      <Link to="/contact" className="bm-link-item-list">
         Contact
       </Link>
     </Menu>

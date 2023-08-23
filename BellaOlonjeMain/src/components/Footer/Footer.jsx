@@ -6,7 +6,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
-import "./Footer.css";
+import "./Footer.scss";
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -25,8 +25,8 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <img className="footer__logo" src={Logo} alt="Logo" />
-      <div className="footer__social">
+      <img className="footer_logo" src={Logo} alt="Logo" />
+      <div className="footer_social">
         <a href="https://www.twitter.com" rel="noopener noreferrer">
           <FaTwitter />
         </a>
@@ -35,7 +35,7 @@ const Footer = () => {
         </a>
         {isMobile ? (
           <a
-            className="footer__social-icon linkedin"
+            className="footer_social-icon linkedin"
             href="https://www.linkedin.com"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ const Footer = () => {
           </a>
         ) : (
           <a
-            className="footer__social-icon instagram"
+            className="footer_social-icon instagram"
             href="https://www.instagram.com"
             rel="noopener noreferrer"
           >
@@ -52,11 +52,9 @@ const Footer = () => {
         )}
       </div>
       {isMobile ? (
-        <p className="footer__mobile">
-          Just type what's on your mind and we'll
-        </p>
+        <p className="footer_mobile">Just type what's on your mind and we'll</p>
       ) : (
-        <div className="footer__desktop">
+        <div className="footer_desktop">
           Copyright &copy; {new Date().getFullYear()} Bella Onojie.com
         </div>
       )}
