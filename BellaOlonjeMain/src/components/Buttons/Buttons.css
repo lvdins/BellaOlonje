@@ -1,0 +1,29 @@
+.btn__btn-primary, .btn__btn-secondary {
+  height: 68px;
+  border-radius: 30px;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0 70px;
+  flex-grow: 0;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  cursor: pointer;
+  border: solid var(--primary) 2px;
+}
+.btn__btn-primary:hover, .btn__btn-secondary:hover {
+  background-color: var(--buttonhvr);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn__btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.btn__btn-secondary {
+  margin-top: 17px;
+  margin-bottom: 253px;
+  background-color: transparent;
+  color: var(--primary);
+}/*# sourceMappingURL=Buttons.css.map */

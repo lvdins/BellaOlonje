@@ -1,6 +1,6 @@
 import "./Phones.scss";
 import Phone from "../../assets/Phones.png";
-import FadeInSection from "../FadeInSection";
+import FadeInSection from "../FadeInSection.jsx";
 
 const Phones = () => {
   return (
